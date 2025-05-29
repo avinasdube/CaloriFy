@@ -1,0 +1,3 @@
+The file models/food_classifier.h5 is a binary file that contains the saved weights of the trained CNN model for food classification. As such, it cannot be represented in a text format. You would typically generate this file by training a model using a deep learning framework such as TensorFlow or Keras, and then saving the model weights to this file.
+
+If you need assistance with how to create this file through code, please let me know!
