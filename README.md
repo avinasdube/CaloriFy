@@ -59,7 +59,7 @@ The project is organized into several directories and files, each serving a spec
 To set up the project, clone the repository and install the required dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Chesthavarshney/CaloriFy.git
 cd CaloriFy
 pip install -r requirements.txt
 ```
