@@ -40,19 +40,28 @@
       [0, 1, 0, 1, ..., 0]
 
 ## Step 6: Preprocess Images for Modeling
+
+    To ensure that the model generalizes well and does not just memorize the training data.
+
     You should:
 
-    - Normalize images: images = images / 255.0
-    - Convert labels to float32 for most ML frameworks
-    - Split into train/test/validation
+    1. Normalize images: images = images / 255.0
+      - Images should have pixel values scaled to the range [0, 1]
+
+    2. Convert labels to float32 for most ML frameworks
+      - Some ML frameworks (especially TensorFlow/Keras) require labels in float format
+
+    3. Split into train/test/validation
+      - Training set: model learns from this (e.g. 70%)
+      - Validation set: tune hyperparameters (e.g. 15%)
+      - Test set: evaluate final performance (e.g. 15%)
 
 ## Step 7: Prepare for Deep Learning Framework
-    Depending on your library (TensorFlow or PyTorch), wrap the data into:
+    Wrap the data into TensorFlow: tf.data.Dataset
 
-    - TensorFlow: tf.data.Dataset
-    - PyTorch: Custom Dataset and DataLoader
+    - You now wrap your X_train, y_train, etc. into a format suitable for your framework.
 
-## Step 8: (Optional) Map Class to Calories
+## Step 8: Map Class to Calories
     If your project is food calorie prediction, you’ll need:
 
     - A CSV or dictionary mapping class_name → average_calories
