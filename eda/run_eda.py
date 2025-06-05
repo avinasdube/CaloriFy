@@ -1,6 +1,7 @@
 # eda/run_eda.py
 '''
     Main script to run all EDA steps together.
+    Script to Run (from root directory): "py -m eda.run_eda"
 '''
 
 from eda.analyze_dataset import print_basic_info
